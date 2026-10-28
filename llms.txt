@@ -1,0 +1,46 @@
+# gitops-check
+
+Validate GitOps repository structure before the reconciliation loop runs.
+
+## What it does
+
+Checks a GitOps repository for:
+- Controller detection (ArgoCD or Flux present)
+- Secret externalization (Sealed Secrets, SOPS, External Secrets)
+- Plaintext secret scan (passwords, tokens, API keys, private keys in Git)
+- Config separation (config repo distinct from app code repo)
+
+## Key files
+
+- gitops_check.py: main CLI tool, manual sys.argv parsing
+- test_gitops_check.py: 10 tests
+
+## CLI usage
+
+    python gitops_check.py <directory> [--report] [--json]
+
+## Flags
+
+- <directory>: path to scan (default: current directory)
+- --report: one paste-ready summary line
+- --json: machine-readable output
+
+## Exit codes
+
+- 0: score >= 70 (pass)
+- 1: score < 70 (fail)
+- 2: error (bad path)
+
+## Design patterns
+
+- Zero dependencies (stdlib only)
+- Single file (gitops_check.py)
+- MIT license
+- --report mode for paste-ready output
+- Exit code 0/1 for CI integration
+- Manual sys.argv parsing (no argparse)
+
+## Related
+
+- Article 24: "GitOps: It Is Not Git Plus Ops"
+- XERJ Corpus Hub: not yet selected
