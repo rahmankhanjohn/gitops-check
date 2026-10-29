@@ -43,4 +43,4 @@ Checks a GitOps repository for:
 ## Related
 
 - Article 24: "GitOps: It Is Not Git Plus Ops"
-- XERJ Corpus Hub: not yet selected
+- XERJ Corpus Hub: selected 2026-10-28 (runbook + diagnose commit f153c59)
