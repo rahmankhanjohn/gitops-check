@@ -1,7 +1,8 @@
-# gitops-check
+﻿# gitops-check
 
 ![Tests](https://github.com/rahmankhanjohn/gitops-check/actions/workflows/test.yml/badge.svg)
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![XERJ Corpus Hub contributor](https://hub.xerj.org/contributors/rahmankhanjohn/badge.svg)
 ![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)
 ![Dependencies: 0](https://img.shields.io/badge/dependencies-0-brightgreen.svg)
 ![Tests: 10](https://img.shields.io/badge/tests-10%20passing-brightgreen.svg)
@@ -15,10 +16,10 @@ Most teams call their deployment process GitOps. What they have is a Git reposit
 
 ## What it checks
 
-- **Controller detection** — ArgoCD or Flux present in the repo
-- **Secret externalization** — Sealed Secrets, SOPS, or External Secrets (not plaintext)
-- **Plaintext secret scan** — passwords, tokens, API keys, private keys in Git
-- **Config separation** — config repo distinct from app code repo
+- **Controller detection** â€” ArgoCD or Flux present in the repo
+- **Secret externalization** â€” Sealed Secrets, SOPS, or External Secrets (not plaintext)
+- **Plaintext secret scan** â€” passwords, tokens, API keys, private keys in Git
+- **Config separation** â€” config repo distinct from app code repo
 
 ## Usage
 
@@ -45,6 +46,10 @@ GitOps Check: /path/to/repo
 - 0: score >= 70 (pass)
 - 1: score < 70 (fail)
 - 2: error (bad path)
+
+## Recognition
+
+Indexed on the [XERJ Corpus Hub](https://hub.xerj.org/contributors/rahmankhanjohn) - the open reference memory AI coding agents search before they write code.
 
 ## Requirements
 
